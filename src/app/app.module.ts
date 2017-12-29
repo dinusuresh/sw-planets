@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 
 import {
   MatToolbarModule, MatCardModule, MatProgressBarModule, MatButtonModule, MatIconModule,
-  MatDialogModule, MatFormFieldModule
+  MatDialogModule, MatFormFieldModule, MatInputModule
 } from '@angular/material';
 import {SwapiService} from './services/swapi.service';
 import { AddPlanetDialogComponent } from './add-planet-dialog/add-planet-dialog.component';
@@ -32,7 +32,8 @@ import { ViewPlanetDialogComponent } from './view-planet-dialog/view-planet-dial
     MatButtonModule,
     MatIconModule,
     MatDialogModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [ SwapiService ],
   bootstrap: [AppComponent],

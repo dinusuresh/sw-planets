@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {SwapiService} from './services/swapi.service';
 import {AddPlanetDialogComponent} from './add-planet-dialog/add-planet-dialog.component';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
-import {ViewPlanetDialogComponent} from "./view-planet-dialog/view-planet-dialog.component";
+import {ViewPlanetDialogComponent} from './view-planet-dialog/view-planet-dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -29,8 +29,13 @@ export class AppComponent implements OnInit {
   }
 
   addPlanet() {
-    this.addPlanetDialogRef = this.dialog.open(AddPlanetDialogComponent);
-    this.swapi.addPlanet();
+    this.addPlanetDialogRef = this.dialog.open(AddPlanetDialogComponent, {
+      width: '400px'
+    });
+
+    this.addPlanetDialogRef.afterClosed().subscribe(result => {
+      this.planets.push(result);
+    })
   }
 
   viewPlanet(i) {

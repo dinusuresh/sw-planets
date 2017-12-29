@@ -1,0 +1,54 @@
+<form [formGroup]="form" (ngSubmit)="submit(form)">
+  <h1 mat-dialog-title>Add Planet</h1>
+  <mat-dialog-content>
+    <div class="form-container">
+      <mat-form-field>
+        <input matInput formControlName="name" placeholder="Planet Name">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput formControlName="rotation_period" placeholder="Roation Period">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput formControlName="orbital_period" placeholder="Orbital Period">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput formControlName="diameter" placeholder="Diameter">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput formControlName="climate" placeholder="Climate">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput formControlName="gravity" placeholder="Gravity">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput formControlName="terrain" placeholder="Terrain">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput formControlName="surface_water" placeholder="Surface Water">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput formControlName="population" placeholder="Population">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput formControlName="residents" placeholder="Residents">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput formControlName="films" placeholder="Films">
+      </mat-form-field>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button type="submit">Add</button>
+    <button mat-button type="button" mat-dialog-close>Cancel</button>
+  </mat-dialog-actions>
+</form>
