@@ -9,16 +9,8 @@ export class SwapiService {
 
   constructor(private http: HttpClient) { }
 
-  getPlanetsList(url): Observable {
+  getPlanetsList(url): Observable<any> {
     return this.http.get(url ? url : this.api);
-  }
-
-  addPlanet(): Observable {
-    return null;
-  }
-
-  deletePlanet(): Observable {
-    return null;
   }
 
 }
