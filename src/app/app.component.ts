@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {SwapiService} from './services/swapi.service';
+import {AddPlanetDialogComponent} from './add-planet-dialog/add-planet-dialog.component';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import {ViewPlanetDialogComponent} from "./view-planet-dialog/view-planet-dialog.component";
 
 @Component({
   selector: 'app-root',
@@ -12,8 +15,10 @@ export class AppComponent implements OnInit {
   planets: Object[];
   apiUrl: string;
   loading: boolean;
+  addPlanetDialogRef: MatDialogRef<AddPlanetDialogComponent>;
+  viewPlanetDialogRef: MatDialogRef<ViewPlanetDialogComponent>;
 
-  constructor(private swapi: SwapiService) {
+  constructor(private swapi: SwapiService, public dialog: MatDialog) {
     this.planets = [];
     this.apiUrl = '';
     this.loading = false;
@@ -24,11 +29,14 @@ export class AppComponent implements OnInit {
   }
 
   addPlanet() {
+    this.addPlanetDialogRef = this.dialog.open(AddPlanetDialogComponent);
     this.swapi.addPlanet();
   }
 
-  openPlanet(i) {
-    console.log(i);
+  viewPlanet(i) {
+    this.viewPlanetDialogRef = this.dialog.open(ViewPlanetDialogComponent, {
+      data: {planet: this.planets[i]}
+    });
   }
 
   getPlanetsList() {

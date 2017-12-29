@@ -1,14 +1,14 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
     <span>Star Wars Planets</span>
-    <button mat-button (click)="deletePlanet(i)" class="small-button pull-right">
+    <button mat-button (click)="addPlanet()" class="small-button pull-right">
       <mat-icon>add</mat-icon>
     </button>
   </mat-toolbar-row>
 </mat-toolbar>
 
 <div class="planet-container">
-  <mat-card class="planet-card" *ngFor="let planet of planets; let i=index" (click)="openPlanet(i)">
+  <mat-card class="planet-card" *ngFor="let planet of planets; let i=index" (click)="viewPlanet(i)">
     <mat-card-header>
       <mat-card-title>{{planet.name}}</mat-card-title>
       <button mat-button (click)="deletePlanet(i)" class="small-button pull-right">
