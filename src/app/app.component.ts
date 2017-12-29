@@ -34,7 +34,9 @@ export class AppComponent implements OnInit {
     });
 
     this.addPlanetDialogRef.afterClosed().subscribe(result => {
-      this.planets.push(result);
+      if (result.name) {
+        this.planets.push(result);
+      }
     })
   }
 

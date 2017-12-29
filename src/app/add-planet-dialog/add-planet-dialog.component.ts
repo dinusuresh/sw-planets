@@ -29,12 +29,10 @@ export class AddPlanetDialogComponent implements OnInit {
     });
   }
 
-  Cancel(): void {
-    this.dialogRef.close();
-  }
-
   submit(form) {
-    this.dialogRef.close(form.value);
+    if (form.value.name) {
+      this.dialogRef.close(form.value);
+    }
   }
 
 }
