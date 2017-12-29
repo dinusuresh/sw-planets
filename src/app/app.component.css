@@ -1,0 +1,29 @@
+.planet-container {
+  margin:0 auto;
+}
+
+.planet-card {
+  width: 300px;
+  float: left;
+  margin: 10px;
+}
+
+.footer {
+  margin: 20px 0;
+  display: block;
+  text-align: center;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.loading-bar-container {
+  display: block;
+  margin: 0 auto;
+  width: 10%;
+}
+
+.loading-bar {
+  margin-top: 10px;
+}

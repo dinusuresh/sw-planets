@@ -3,3 +3,21 @@
     <span>Star Wars Planets</span>
   </mat-toolbar-row>
 </mat-toolbar>
+
+<div class="planet-container">
+  <mat-card class="planet-card" *ngFor="let planet of planets">
+    <mat-card-header>
+      <mat-card-title>{{planet.name}}</mat-card-title>
+    </mat-card-header>
+  </mat-card>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="footer">
+  <div class="loading-bar-container" *ngIf="loading">
+    <mat-progress-bar class="loading-bar" mode="query"></mat-progress-bar>
+    <h3>L O A D I N G</h3>
+  </div>
+  <button mat-raised-button color="primary" *ngIf="!loading" (click)="getPlanetsList()">View More Planets</button>
+</div>
