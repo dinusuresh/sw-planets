@@ -6,7 +6,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 
-import { MatToolbarModule } from '@angular/material';
+import { MatToolbarModule, MatCardModule, MatProgressBarModule, MatButtonModule } from '@angular/material';
+import {SwapiService} from './services/swapi.service';
 
 @NgModule({
   declarations: [
@@ -18,9 +19,12 @@ import { MatToolbarModule } from '@angular/material';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCardModule,
+    MatProgressBarModule,
+    MatButtonModule
   ],
-  providers: [],
+  providers: [ SwapiService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
