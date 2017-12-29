@@ -27,6 +27,10 @@ export class AppComponent implements OnInit {
     this.swapi.addPlanet();
   }
 
+  openPlanet(i) {
+    console.log(i);
+  }
+
   getPlanetsList() {
     this.loading = true;
     this.swapi.getPlanetsList(this.apiUrl).subscribe(
@@ -38,7 +42,8 @@ export class AppComponent implements OnInit {
     );
   }
 
-  deletePlanet() {
-    this.swapi.deletePlanet();
+  deletePlanet(index) {
+    // Since the api does not support delete operation, we perform it locally
+    this.planets.splice(index, 1);
   }
 }

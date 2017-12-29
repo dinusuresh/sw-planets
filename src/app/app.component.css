@@ -27,3 +27,12 @@
 .loading-bar {
   margin-top: 10px;
 }
+
+.pull-right {
+  position: absolute;
+  right: 20px;
+}
+
+.small-button {
+  min-width: 0px!important; width: 40px; padding: 0px;
+}

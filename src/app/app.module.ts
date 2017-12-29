@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 
-import { MatToolbarModule, MatCardModule, MatProgressBarModule, MatButtonModule } from '@angular/material';
+import { MatToolbarModule, MatCardModule, MatProgressBarModule, MatButtonModule, MatIconModule } from '@angular/material';
 import {SwapiService} from './services/swapi.service';
 
 @NgModule({
@@ -22,7 +22,8 @@ import {SwapiService} from './services/swapi.service';
     MatToolbarModule,
     MatCardModule,
     MatProgressBarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [ SwapiService ],
   bootstrap: [AppComponent]
