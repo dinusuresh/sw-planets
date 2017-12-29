@@ -1,0 +1,75 @@
+<h1 mat-dialog-title>{{data.planet.name}}</h1>
+<mat-dialog-content>
+  <table border="1">
+    <tr>
+      <td>Name</td>
+      <td>{{data.planet.name}}</td>
+    </tr>
+
+    <tr>
+      <td>Rotation Period</td>
+      <td>{{data.planet.rotation_period || '-'}}</td>
+    </tr>
+
+    <tr>
+      <td>Orbital Period</td>
+      <td>{{data.planet.orbital_period}}</td>
+    </tr>
+
+    <tr>
+      <td>Diameter</td>
+      <td>{{data.planet.diameter}}</td>
+    </tr>
+
+    <tr>
+      <td>Climate</td>
+      <td>{{data.planet.climate}}</td>
+    </tr>
+
+    <tr>
+      <td>Gravity</td>
+      <td>{{data.planet.gravity}}</td>
+    </tr>
+
+    <tr>
+      <td>Terrain</td>
+      <td>{{data.planet.terrain}}</td>
+    </tr>
+
+    <tr>
+      <td>Surface Water</td>
+      <td>{{data.planet.surface_water}}</td>
+    </tr>
+
+    <tr>
+      <td>Population</td>
+      <td>{{data.planet.population}}</td>
+    </tr>
+
+    <tr>
+      <td>Residents</td>
+      <td>
+        <ul>
+          <li *ngFor="let resident of data.planet.residents">
+            <a href="{{resident}}" target="__blank">{{resident}}</a>
+          </li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Films</td>
+      <td>
+        <ul>
+          <li *ngFor="let film of data.planet.films">
+            <a href="{{film}}" target="__blank">{{film}}</a>
+          </li>
+        </ul>
+      </td>
+    </tr>
+
+  </table>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button color="primary" type="button" mat-dialog-close>Close</button>
+</mat-dialog-actions>
